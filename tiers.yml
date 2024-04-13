@@ -1,5 +1,5 @@
 common:
-  Name: '#e8f2f2普通'
+  Name: '#e8f2f2Common'
   Color: '#e8f2f2'
   Priority: 1
   Obtain_Chance:
@@ -9,7 +9,7 @@ common:
     LOOT_GENERATION: 50.0
     VILLAGER: 50.0
 rare:
-  Name: '#74ea31稀有'
+  Name: '#74ea31Rare'
   Color: '#74ea31'
   Priority: 2
   Obtain_Chance:
@@ -19,7 +19,7 @@ rare:
     LOOT_GENERATION: 25.0
     VILLAGER: 25.0
 unique:
-  Name: '#ead931独特'
+  Name: '#ead931Unique'
   Color: '#ead931'
   Priority: 3
   Obtain_Chance:
@@ -29,7 +29,7 @@ unique:
     LOOT_GENERATION: 15.0
     VILLAGER: 15.0
 legendary:
-  Name: '#ea9631传奇'
+  Name: '#ea9631Legendary'
   Color: '#ea9631'
   Priority: 4
   Obtain_Chance:
