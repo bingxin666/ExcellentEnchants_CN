@@ -1,0 +1,64 @@
+Settings:
+  # 设置GUI标题。
+  Title: '#6c6c62&l自定义附魔'
+  # 设置GUI大小。必须是9的倍数。
+  # 仅适用于'CHEST'库存类型。
+  Size: 36
+  # 设置GUI类型。
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+  Inventory_Type: CHEST
+  # 设置GUI自动刷新间隔（以秒为单位）。将其设置为0以禁用。
+  Auto_Refresh: 0
+Enchantment:
+  Icon:
+    Material: ENCHANTED_BOOK
+  Name: '%enchantment_name_formatted%'
+  Lore:
+    Main:
+    - '%enchantment_description%'
+    - '#6c6c62(点击切换等级)'
+    - ''
+    - '#ffeea2&l信息:'
+    - '#ffeea2▪ #d4d9d8等级: #ffeea2%enchantment_tier%'
+    - '#ffeea2▪ #d4d9d8适用于: #ffeea2%enchantment_fit_item_types%'
+    - '#ffeea2▪ #d4d9d8等级范围: #ffeea2%enchantment_level_min%#aaa8a8 - #ffeea2%enchantment_level_max%'
+    - '%charges%'
+    - '%conflicts%'
+    - '%obtaining%'
+    Conflicts:
+    - ''
+    - '#fd5e5e&l冲突:'
+    - '#fd5e5e✘ #d4d9d8%name%'
+    Charges:
+    - '#ffeea2▪ #d4d9d8充能: #ffeea2%enchantment_charges_max_amount%⚡#d4d9d8 (#e8f2f2%enchantment_charges_fuel_item%#d4d9d8)'
+    Obtaining:
+    - ''
+    - '#aefd5e&l获取方式:'
+    - '#aefd5e✔ #d4d9d8%type%'
+  Slots: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26
+# ==================== GUI CONTENT ====================
+# 您可以自由编辑此部分中的项目（添加、删除、修改项目）。
+# 在文档中获取一些提示：https://github.com/nulli0n/NexEngine-spigot/wiki/Menu-Config
+# 按钮类型的以下值可用：
+# - CLOSE
+# - PAGE_NEXT
+# - PAGE_PREVIOUS
+# ==================================================
+Content:
+  next_page_→_1:
+    Priority: 5
+    Item:
+      Material: PLAYER_HEAD
+      Head_Texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjMyY2E2NjA1NmI3Mjg2M2U5OGY3ZjMyYmQ3ZDk0YzdhMGQ3OTZhZjY5MWM5YWMzYTkxMzYzMzEzNTIyODhmOSJ9fX0=
+      Name: '#e8f2f2下一页#d4d9d8 (→)'
+    Slots: '35'
+    Type: PAGE_NEXT
+  ←_previous_page_2:
+    Priority: 5
+    Item:
+      Material: PLAYER_HEAD
+      Head_Texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODY5NzFkZDg4MWRiYWY0ZmQ2YmNhYTkzNjE0NDkzYzYxMmY4Njk2NDFlZDU5ZDFjOTM2M2EzNjY2YTVmYTYifX19
+      Name: '#d4d9d8(←) #e8f2f2上一页'
+    Slots: '27'
+    Type: PAGE_PREVIOUS
+

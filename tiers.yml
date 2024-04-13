@@ -1,0 +1,40 @@
+common:
+  Name: '#e8f2f2普通'
+  Color: '#e8f2f2'
+  Priority: 1
+  Obtain_Chance:
+    ENCHANTING: 50.0
+    FISHING: 50.0
+    MOB_SPAWNING: 50.0
+    LOOT_GENERATION: 50.0
+    VILLAGER: 50.0
+rare:
+  Name: '#74ea31稀有'
+  Color: '#74ea31'
+  Priority: 2
+  Obtain_Chance:
+    ENCHANTING: 25.0
+    FISHING: 25.0
+    MOB_SPAWNING: 25.0
+    LOOT_GENERATION: 25.0
+    VILLAGER: 25.0
+unique:
+  Name: '#ead931独特'
+  Color: '#ead931'
+  Priority: 3
+  Obtain_Chance:
+    ENCHANTING: 15.0
+    FISHING: 15.0
+    MOB_SPAWNING: 15.0
+    LOOT_GENERATION: 15.0
+    VILLAGER: 15.0
+legendary:
+  Name: '#ea9631传奇'
+  Color: '#ea9631'
+  Priority: 4
+  Obtain_Chance:
+    ENCHANTING: 5.0
+    FISHING: 5.0
+    MOB_SPAWNING: 5.0
+    LOOT_GENERATION: 5.0
+    VILLAGER: 5.0

@@ -1,0 +1,128 @@
+Plugin:
+  # 将注册为主插件命令的命令名称。
+  # 不要留空。使用逗号分隔多个名称。
+  Command_Aliases: excellentenchants,eenchants
+  # 本地化的插件名称。用于消息和内部占位符。
+  Name: ExcellentEnchants
+  # 插件前缀。用于消息。
+  # 您可以使用 %plugin_name_localized% 占位符来表示插件名称。
+  Prefix: '#fdf35e%plugin_name%#d4d9d8 » '
+  # 设置插件语言。
+  # 它将使用 '/lang/' 子文件夹中指定语言代码的语言配置。
+  # 默认使用系统的默认区域设置。
+  Language: cn
+Tasks:
+  Arrow_Trail:
+    # 设置箭矢轨迹粒子效果生成的频率（以游戏刻为单位）。
+    Tick_Interval: 1
+  Passive_Enchants:
+    # 设置插件尝试触发所有存活实体的被动附魔效果的频率（以游戏刻为单位）。
+    # 为了获得最佳效果，建议将此值保持较小，但与附魔的 'Trigger_Interval' 设置相同的速率。
+    # 示例：
+    # --- 全局: 100 刻; Regrowth: 100 刻; Saturation: 100 刻;
+    # --- 全局: 50 刻, Regrowth: 100 刻; Saturation: 150 刻;
+    Trigger_Interval: 100
+Enchantments:
+  # [实验性 - 请勿修改]
+  # 设置是否由原版服务器机制处理附魔分配。
+  Internal_Distributor: false
+  Charges:
+    # 启用附魔充能功能。
+    # https://github.com/nulli0n/ExcellentEnchants-spigot/wiki/Charges-System
+    Enabled: false
+    # 附魔充能格式取决于剩余充能量（以百分比表示）。
+    # 如果您不想显示充能量，请只保留具有负值的键。
+    # 使用 '%amount%' 占位符表示充能量。
+    Format:
+      '0': '#ff9a9a(%amount%⚡)'
+      '25': '#ffc39a(%amount%⚡)'
+      '50': '#f6ff9a(%amount%⚡)'
+      '75': '#bcff9a(%amount%⚡)'
+    # 当启用时，只会检查物品材质以确定物品是否可以用作附魔燃料。
+    # 当禁用（默认）时，将比较整个物品元数据，包括名称、描述、模型数据等。
+    Compare_Material_Only: false
+    # 用于在铁砧上重新充能物品附魔的默认物品。
+    # 如果您希望为特定附魔使用不同的物品，可以在该附魔的配置中进行设置。
+    # 物品选项：https://github.com/nulli0n/NexEngine-spigot/wiki/Configuration-Tips#scalable-sections
+    Fuel_Item:
+      Material: LAPIS_LAZULI
+  # 要禁用并从游戏（服务器）中删除的附魔列表。
+  # 附魔名称与 '/enchants/' 文件夹中的附魔文件名相同。！必须使用小写！
+  # 示例：要禁用 'Explosive Arrows'，您需要在此处添加 'explosive_arrows'。
+  Disabled:
+  - enchant_name
+  - other_enchant
+  # 在特定世界中禁用特定附魔。
+  # 附魔名称与 '/enchants/' 文件夹中的附魔文件名相同。！必须使用小写！
+  # 要为某个世界禁用所有附魔，请使用 '*' 而不是附魔名称。
+  Disabled_In_Worlds:
+    your_world_name:
+    - enchantment_name
+    - ice_aspect
+  Display:
+    # 设置附魔名称和描述在物品上的处理方式。
+    # 1 = 直接修改物品的描述（描述更改是真实和持久的）。
+    # 2 = 使用数据包修改物品的描述（对物品没有真实更改）。需要 ProtocolLib。
+    # 直接修改模式更快，但可能无法立即反映所有更改。
+    # 数据包修改模式更慢，但可以立即反映所有更改。在创造模式下，可能会出现描述重复的情况。
+    Mode: 1
+  Description:
+    # 当为 'true' 时，在附魔名称下添加附魔描述到物品描述中。
+    # 对于 Display-Mode = 2，在创造模式下不显示描述。
+    Enabled: true
+    # 设置是否只有附魔书才会有附魔描述。
+    Books_Only: false
+    # 设置全局附魔描述格式。
+    Format: '&8▸ %description%'
+  Item:
+    # 物品可以同时包含的自定义附魔数量？
+    Max_Custom_Enchants: 3
+    # 将此设置为 'true'，以允许剑附魔用于斧头。
+    Sword_Enchants_To_Axes: true
+    # 将此设置为 'true'，以允许弓附魔用于弩。
+    Bow_Enchants_To_Crossbows: true
+    # 将此设置为 'true'，以允许胸甲附魔用于鞘翅。
+    Chestplate_Enchants_To_Elytra: false
+  Entity:
+    # 当启用时，被动附魔（永久药水效果、恢复等）也将应用于生物。
+    # 如果遇到性能问题，请禁用此选项。
+    Apply_Passive_Enchants_To_Mobs: true
+  # 设置村民交易中的附魔书是否只有 1 个附魔，原版或自定义。
+  Single_Enchant_In_Villager_Books: true
+  # 获取附魔的不同方式的设置。
+  Obtaining:
+    Mob_Spawning:
+      Enabled: true
+      Enchantments:
+        Total_Maximum: 4
+        Custom_Generation_Chance: 80.0
+        Custom_Minimum: 0
+        Custom_Maximum: 2
+    Loot_Generation:
+      Enabled: true
+      Enchantments:
+        Total_Maximum: 4
+        Custom_Generation_Chance: 80.0
+        Custom_Minimum: 0
+        Custom_Maximum: 2
+    Fishing:
+      Enabled: true
+      Enchantments:
+        Total_Maximum: 4
+        Custom_Generation_Chance: 80.0
+        Custom_Minimum: 0
+        Custom_Maximum: 2
+    Enchanting_Table:
+      Enabled: true
+      Enchantments:
+        Total_Maximum: 4
+        Custom_Generation_Chance: 80.0
+        Custom_Minimum: 0
+        Custom_Maximum: 2
+    Villagers:
+      Enabled: true
+      Enchantments:
+        Total_Maximum: 4
+        Custom_Generation_Chance: 80.0
+        Custom_Minimum: 0
+        Custom_Maximum: 2

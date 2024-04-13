@@ -1,0 +1,109 @@
+# 附魔显示名称。将显示在物品描述中。
+Name: 黑暗箭矢
+# 附魔等级。必须是 'tiers.yml' 中有效的等级标识符。
+Tier: rare
+# 附魔描述。将显示在附魔名称下的物品描述中。
+# 您可以使用 'Enchantment' 占位符：https://github.com/nulli0n/ExcellentEnchants-spigot/wiki/Internal-Placeholders
+Description:
+- '%enchantment_trigger_chance%% 的几率发射一支带有 %enchantment_potion_type% %enchantment_potion_level% (%enchantment_potion_duration%秒) 的箭矢'
+# 设置是否在附魔列表中隐藏此附魔。
+Hide_From_List: false
+# 设置此附魔是否为宝藏附魔。
+# 宝藏附魔只能通过掠夺、交易或钓鱼获得。
+Is_Treasure: false
+Level:
+  # 设置最小（起始）附魔等级。不能小于 1。
+  Min: 1
+  # 设置最大附魔等级。不能小于最小等级。
+  # 注意：虽然您可以通过附魔命令“绕过”此值，但所有与等级相关的附魔设置都将受到此设置的限制。
+  Max: 3
+Anvil:
+  # 设置通过合并两个具有此附魔的物品可以获得的最大附魔等级。
+  # 将其设置为 '-1' 可以移除合并限制，只使用 'Max Level'。
+  Max_Merge_Level: -1
+  # 当合并自定义附魔时，设置将添加到铁砧费用中的经验等级。
+  # 您可以在此处使用公式/表达式：https://github.com/nulli0n/NexEngine-spigot/wiki/Configuration-Tips#scalable-sections
+  # 等级占位符：%enchantment_level%
+  Merge_Cost: '%enchantment_level%'
+Enchanting_Table:
+  # 设置在附魔台中使用的经验等级以获得此附魔。
+  # 使用默认公式 '9 * %enchantment_level%'，[1, 2, 3] 附魔等级将需要 [9, 18, 27] 经验等级。
+  # 您可以在此处使用公式/表达式：https://github.com/nulli0n/NexEngine-spigot/wiki/Configuration-Tips#scalable-sections
+  # 等级占位符：%enchantment_level%
+  Level_By_Exp_Cost: 10 * %enchantment_level%
+  # 通过附魔台获得此附魔的几率。
+  Chance: 50.0
+  Level:
+    # 通过附魔台获得时的最小等级
+    # 不能小于附魔的最小等级。设置为 -1 以使用附魔的最小等级。
+    Min: -1
+    # 通过附魔台获得时的最大等级
+    # 不能大于附魔的最大等级。设置为 -1 以使用附魔的最大等级。
+    Max: -1
+Villagers:
+  # 通过村民获得此附魔的几率。
+  Chance: 50.0
+  Level:
+    # 通过村民获得时的最小等级
+    # 不能小于附魔的最小等级。设置为 -1 以使用附魔的最小等级。
+    Min: -1
+    # 通过村民获得时的最大等级
+    # 不能大于附魔的最大等级。设置为 -1 以使用附魔的最大等级。
+    Max: -1
+Loot_Generation:
+  # 通过战利品生成获得此附魔的几率。
+  Chance: 50.0
+  Level:
+    # 通过战利品生成获得时的最小等级
+    # 不能小于附魔的最小等级。设置为 -1 以使用附魔的最小等级。
+    Min: -1
+    # 通过战利品生成获得时的最大等级
+    # 不能大于附魔的最大等级。设置为 -1 以使用附魔的最大等级。
+    Max: -1
+Fishing:
+  # 通过钓鱼获得此附魔的几率。
+  Chance: 50.0
+  Level:
+    # 通过钓鱼获得时的最小等级
+    # 不能小于附魔的最小等级。设置为 -1 以使用附魔的最小等级。
+    Min: -1
+    # 通过钓鱼获得时的最大等级
+    # 不能大于附魔的最大等级。设置为 -1 以使用附魔的最大等级。
+    Max: -1
+Mob_Spawning:
+  # 通过刷怪获得此附魔的几率。
+  Chance: 50.0
+  Level:
+    # 通过刷怪获得时的最小等级
+    # 不能小于附魔的最小等级。设置为 -1 以使用附魔的最小等级。
+    Min: -1
+    # 通过刷怪获得时的最大等级
+    # 不能大于附魔的最大等级。设置为 -1 以使用附魔的最大等级。
+    Max: -1
+# 冲突的附魔名称列表。
+# 冲突的附魔无法在铁砧上合并，也无法在同一物品上同时获得。
+Conflicts:
+- bomber
+- ghast
+- ender_bow
+Settings:
+  # 启用/禁用附魔的视觉效果，如粒子效果。
+  Visual_Effects: true
+  Arrow:
+    # 设置此附魔的箭矢轨迹粒子效果。
+    Trail_Effect:
+      Name: ASH
+  # 触发此附魔的几率。
+  # 您可以在此处使用公式/表达式：https://github.com/nulli0n/NexEngine-spigot/wiki/Configuration-Tips#scalable-sections
+  # 等级占位符：%enchantment_level%
+  Trigger_Chance: 25.0 + %enchantment_level% * 5.0
+  Potion_Effect:
+    # 药水效果持续时间（秒）。对于“永久”效果，此设置无效。
+    # 您可以在此处使用公式/表达式：https://github.com/nulli0n/NexEngine-spigot/wiki/Configuration-Tips#scalable-sections
+    # 等级占位符：%enchantment_level%
+    Duration: 4.0 + %enchantment_level%
+    # 药水效果等级。
+    # 您可以在此处使用公式/表达式：https://github.com/nulli0n/NexEngine-spigot/wiki/Configuration-Tips#scalable-sections
+    # 等级占位符：%enchantment_level%
+    Level: '%enchantment_level%'
+

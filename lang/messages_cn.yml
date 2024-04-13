@@ -1,0 +1,68 @@
+# Tranlsated by @qsefthuopq
+# Last updated:2021-03-15
+Command:
+  Enchant:
+    Usage: <附魔名> <等级>
+    Desc: 附魔你手中的物品。
+    Done:
+      Self: '#fdba5e%item%#ffeea2 enchanted with %enchant% %level%#ffeea2!'
+      Others: '#fdba5e%player_display_name%#ffeea2''s #fdba5e%item%#ffeea2 enchanted with %enchant% %level%#ffeea2!'
+    Error:
+      NoItem: '#ea3131There is no item to enchant!'
+  Book:
+    Usage: <玩家> <附魔名> <等级>
+    Desc: 给予自定义附魔书。
+    Done: 已给予&6%player%&6%enchant%&7附魔书。
+  TierBook:
+    Usage: <玩家> <品质> <等级>
+    Desc: 给予自定义品质的附魔书
+    Error: '&c无效品质！'
+    Done: 已给予&6%player&6%enchant%&7附魔书。
+  List:
+    Desc: List of all custom enchantments.
+Error:
+  NoEnchant: '&c没有这种附魔'
+# Here you can create your own custom placeholders to use it in language config.
+# Key = Placeholder, Value = Replacer.
+Placeholders:
+  '%gray%': '#d4d9d8'
+  '%red%': '#fd5e5e'
+  '%green%': '#aefd5e'
+ItemCategory:
+  HELMET: Helmet
+  CHESTPLATE: Chestplate
+  LEGGINGS: Leggings
+  BOOTS: Boots
+  ELYTRA: Elytra
+  SWORD: Sword
+  TRIDENT: Trident
+  AXE: Axe
+  BOW: Bow
+  CROSSBOW: Crossbow
+  HOE: Hoe
+  PICKAXE: Pickaxe
+  SHOVEL: Shovel
+  FISHING_ROD: Fishing Rod
+  TOOL: Tool
+EnchantmentTarget:
+  ALL: All
+  ARMOR: Armor
+  ARMOR_FEET: Armor Feet
+  ARMOR_LEGS: Armor Legs
+  ARMOR_TORSO: Armor Torso
+  ARMOR_HEAD: Armor Head
+  WEAPON: Weapon
+  TOOL: Tool
+  BOW: Bow
+  FISHING_ROD: Fishing Rod
+  BREAKABLE: Breakable
+  WEARABLE: Wearable
+  TRIDENT: Trident
+  CROSSBOW: Crossbow
+  VANISHABLE: Vanishable
+ObtainType:
+  ENCHANTING: Enchanting
+  VILLAGER: Villager
+  LOOT_GENERATION: Loot Generation
+  FISHING: Fishing
+  MOB_SPAWNING: Mob Spawning

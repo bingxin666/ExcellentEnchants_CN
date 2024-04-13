@@ -1,0 +1,97 @@
+# 附魔显示名称。将显示在物品描述中。
+Name: 补种器
+# 附魔等级。必须是'tiers.yml'中有效的等级标识符。
+Tier: rare
+# 附魔描述。将显示在物品描述中的附魔名称下方。
+# 您可以使用'Enchantment'占位符：https://github.com/nulli0n/ExcellentEnchants-spigot/wiki/Internal-Placeholders
+Description:
+- 右键单击和收获时自动重新种植作物。
+# 设置是否将此附魔从附魔GUI中隐藏。
+Hide_From_List: false
+# 设置此附魔是否为宝藏附魔。
+# 宝藏附魔只能通过掠夺、交易或钓鱼获得。
+Is_Treasure: false
+Level:
+  # 设置最小（起始）附魔等级。不能小于1。
+  Min: 1
+  # 设置最大附魔等级。不能小于最小等级。
+  # 注意：虽然您可以通过附魔命令“绕过”此值，但所有与等级相关的附魔设置都将受到此设置的限制。
+  Max: 1
+Anvil:
+  # 设置通过合并两个具有此附魔的物品可以获得的最大附魔等级。
+  # 将其设置为“-1”以删除合并限制，只使用“Max Level”。
+  Max_Merge_Level: -1
+  # 设置在合并自定义附魔时将添加多少经验等级到铁砧成本中。
+  # 您可以在此处使用公式/表达式：https://github.com/nulli0n/NexEngine-spigot/wiki/Configuration-Tips#scalable-sections
+  # 等级占位符：%enchantment_level%
+  Merge_Cost: '%enchantment_level%'
+Enchanting_Table:
+  # 设置在附魔台中使用多少经验等级才能获得此附魔。
+  # 使用默认公式'9 * %enchantment_level%'，对应[1, 2, 3]附魔等级的经验等级为[9, 18, 27]。
+  # 您可以在此处使用公式/表达式：https://github.com/nulli0n/NexEngine-spigot/wiki/Configuration-Tips#scalable-sections
+  # 等级占位符：%enchantment_level%
+  Level_By_Exp_Cost: 30 * %enchantment_level%
+  # 通过附魔台获得此附魔的机会。
+  Chance: 50.0
+  Level:
+    # 通过附魔台获得时的最小等级
+    # 不能小于附魔的最小等级。设置为-1以使用附魔的最小等级。
+    Min: -1
+    # 通过附魔台获得时的最大等级
+    # 不能大于附魔的最大等级。设置为-1以使用附魔的最大等级。
+    Max: -1
+Villagers:
+  # 通过村民获得此附魔的机会。
+  Chance: 50.0
+  Level:
+    # 通过村民获得时的最小等级
+    # 不能小于附魔的最小等级。设置为-1以使用附魔的最小等级。
+    Min: -1
+    # 通过村民获得时的最大等级
+    # 不能大于附魔的最大等级。设置为-1以使用附魔的最大等级。
+    Max: -1
+Loot_Generation:
+  # 通过战利品生成获得此附魔的机会。
+  Chance: 50.0
+  Level:
+    # 通过战利品生成获得时的最小等级
+    # 不能小于附魔的最小等级。设置为-1以使用附魔的最小等级。
+    Min: -1
+    # 通过战利品生成获得时的最大等级
+    # 不能大于附魔的最大等级。设置为-1以使用附魔的最大等级。
+    Max: -1
+Fishing:
+  # 通过钓鱼获得此附魔的机会。
+  Chance: 50.0
+  Level:
+    # 通过钓鱼获得时的最小等级
+    # 不能小于附魔的最小等级。设置为-1以使用附魔的最小等级。
+    Min: -1
+    # 通过钓鱼获得时的最大等级
+    # 不能大于附魔的最大等级。设置为-1以使用附魔的最大等级。
+    Max: -1
+Mob_Spawning:
+  # 通过刷怪获得此附魔的机会。
+  Chance: 50.0
+  Level:
+    # 通过刷怪获得时的最小等级
+    # 不能小于附魔的最小等级。设置为-1以使用附魔的最小等级。
+    Min: -1
+    # 通过刷怪获得时的最大等级
+    # 不能大于附魔的最大等级。设置为-1以使用附魔的最大等级。
+    Max: -1
+# 冲突附魔名称的列表。
+# 冲突的附魔无法在铁砧上合并，也无法在同一物品上同时获得。
+Conflicts: []
+Settings:
+  # 启用/禁用附魔的视觉效果，如粒子效果。
+  Visual_Effects: true
+  # 触发此附魔的几率。
+  # 您可以在此处使用公式/表达式：https://github.com/nulli0n/NexEngine-spigot/wiki/Configuration-Tips#scalable-sections
+  # 等级占位符：%enchantment_level%
+  Trigger_Chance: '100'
+  Replant:
+    # 当为'true'时，玩家可以在右键单击耕地方块时重新种植作物。
+    On_Right_Click: true
+    # 当为'true'时，玩家手持附魔工具破坏植物时，作物将自动重新种植。
+    On_Plant_Break: true
